@@ -10,6 +10,10 @@ pip install -e .
 python scripts/run_sweep.py --base_dir cells-raman-spectra
 ```
 
+## Dataset
+The working dataset is publicly available at: https://www.kaggle.com/datasets/andriitrelin/cells-raman-spectra/data
+
+
 ## Layout
 
 - `src/raman_morpho/` importable library code
