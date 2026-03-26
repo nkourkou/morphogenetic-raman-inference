@@ -1,4 +1,4 @@
-# Morphogenetic Inference for Process-Aware, Self-Auditing Raman Spectralomics
+# Process-aware self-auditing inference in Raman spectralomics: a morphogenetic proof-of-principle
 
 Python code for submitted manuscript.
 
