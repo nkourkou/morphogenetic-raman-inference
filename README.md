@@ -4,10 +4,23 @@ Python code for submitted manuscript.
 
 ## Quickstart
 
+## Installation
+
+Create and activate a virtual environment, then install in editable mode:
+
 ```bash
-# from repo root
+python -m venv .venv
+source .venv/bin/activate
+pip install -U pip
 pip install -e .
-python scripts/run_sweep.py --base_dir cells-raman-spectra
+```
+
+On Windows:
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -U pip
+pip install -e .
 ```
 
 ## Dataset
