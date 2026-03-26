@@ -1,6 +1,6 @@
 # Morphogenetic Inference for Process-Aware, Self-Auditing Raman Spectralomics
 
-Python code for the manuscript submitted to Digital Discovery.
+Python code for submitted manuscript.
 
 ## Quickstart
 
