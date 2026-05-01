@@ -1,4 +1,4 @@
-# Process-aware self-auditing inference in Raman spectralomics: a morphogenetic proof-of-principle
+# Process-aware self-auditing inference of biomedical Raman signal classification
 
 Python code for submitted manuscript.
 
