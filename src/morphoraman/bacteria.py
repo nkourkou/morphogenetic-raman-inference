@@ -38,7 +38,7 @@ def macro_auc_ovr(y_true: np.ndarray, P: np.ndarray) -> float:
     except ValueError as e:
         return np.nan
 
-def evaluate_morphogenetic_system_bact5(full_logits_test: np.ndarray, band_logits_test: np.ndarray, y_test: np.ndarray, damage_fractions: List[float], *, regime: str='plain', damage_mode: str='mixed', alpha: float=0.3, lam: float=1.0, T: float=0.01, tau: float=0.543007, max_iter: int=30, naive_weighting: str='uniform', morpho_weighting: str='confidence', run_id: int=0, weight_clip: tuple=(0.0, 5.0)):
+def evaluate_morphogenetic_system_bact5(full_logits_test: np.ndarray, band_logits_test: np.ndarray, y_test: np.ndarray, damage_fractions: List[float], *, regime: str='plain', damage_mode: str='mixed', alpha: float=0.3, lam: float=1.0, T: float=0.01, tau: float=0.55, max_iter: int=30, naive_weighting: str='uniform', morpho_weighting: str='confidence', run_id: int=0, weight_clip: tuple=(0.0, 5.0)):
     N, K, C = band_logits_test.shape
     results = {'damage_fraction': [], 'acc_full': [], 'bal_acc_full': [], 'acc_naive': [], 'bal_acc_naive': [], 'acc_morpho': [], 'bal_acc_morpho': [], 'auc_full': [], 'auc_naive': [], 'auc_morpho': [], 'dg_index_mean': [], 'dg_index_std': [], 'regime': [], 'damage_mode': []}
     P_full = proba_from_logits(full_logits_test)
