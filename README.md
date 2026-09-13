@@ -1,4 +1,4 @@
-# MorphoRaman
+# Process-aware inference of biomedical Raman spectra classification
 
 Python implementation of band-resolved negotiated inference for Raman spectra. Band-specific classifiers provide class evidence to an iterative consensus process under three regimes: Plain, H1, and H2. The analyses examine predictive performance, Decision Geometry (DG), and the association between early relative DG (eREDG) and prediction correctness.
 
