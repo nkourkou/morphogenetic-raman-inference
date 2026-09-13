@@ -18,7 +18,7 @@ Datasets are not included or downloaded automatically. Supply the files locally 
 
 ### Melanoma
 
-Point to the `cells-raman-spectra` directory containing `dataset_i`. The loader searches recursively for CSV files below `dataset_i`; each file's immediate parent directory supplies its label. CSVs must contain numeric spectra without a header, one spectrum per row and 2,090 values per spectrum.
+The loader searches recursively for CSV files below `dataset_i`; each file's immediate parent directory supplies its label. CSVs must contain numeric spectra without a header, one spectrum per row and 2,090 values per spectrum.
 
 The loader constructs an axis from 100 to 4,278 cm⁻¹ and rounds its column labels to integer wavenumbers. Labels `A` and `G` form the melanoma group, `HPM` and `HF` the normal-skin group, and `ZAM` the disease-related group. Serum, `DMEM`, and labels ending in `-S` are excluded. Seven inference bands cover 400–2,000 cm⁻¹.
 
