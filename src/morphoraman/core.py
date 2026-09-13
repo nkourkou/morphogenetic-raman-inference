@@ -166,7 +166,7 @@ def morphogenetic_consensus_one(band_logits0: Union[np.ndarray, list], frozen_fl
                     L_prop[k] = l_neigh_avg
                 else:
                     L_prop[k] = (1.0 - alpha) * L[k] + alpha * l_neigh_avg
-                    w_prop[k] = np.clip(w_prop[k] * (1.0 + diff_amp), wmin, wmax)
+                    w_prop[k] = np.clip(w_prop[k] + diff_amp, wmin, wmax)
             else:
                 raise ValueError(f"Unknown regime: {regime} (use 'plain', 'H1', or 'H2')")
         w_prop = np.clip(w_prop, wmin, wmax)
@@ -326,7 +326,8 @@ def consensus_with_stress(band_logits0: List[np.ndarray], frozen_flags: np.ndarr
                     band_logits_prop[k] = l_neigh_avg
                 else:
                     band_logits_prop[k] = (1.0 - alpha) * band_logits[k] + alpha * l_neigh_avg
-                    weights_prop[k] = min(wmax, max(wmin, weights_prop[k] * (1.0 + diff_amp)))
+                    weights_prop[k] = min(wmax, max(wmin, weights_prop[k] + diff_amp))
+                    
             else:
                 raise ValueError(f'Unknown regime: {regime}')
         weights_prop = np.clip(weights_prop, wmin, wmax)
