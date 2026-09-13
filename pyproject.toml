@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "morphoraman"
+version = "0.2.0"
+requires-python = ">=3.10"
+dependencies = ["numpy", "pandas", "scipy", "scikit-learn", "matplotlib"]
+
+[project.scripts]
+morphoraman = "morphoraman.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
