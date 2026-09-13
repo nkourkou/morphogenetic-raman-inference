@@ -40,7 +40,7 @@ Provide one copy of each of these files within the data directory or its subdire
 - `X_2019clinical.npy` and `y_2019clinical.npy`;
 - `wavenumbers.npy`.
 
-Spectral arrays have shape `(n_samples, n_wavenumbers)`; label and axis arrays are one-dimensional. Supply the intended five-class clinical subsets: the loader does not select those classes from a larger dataset. Clinical 2018 is split into training and validation sets; clinical 2019 is the external evaluation set. Seven equal-width inference bands span 400 cm⁻¹ to the smaller of 1,800 cm⁻¹ and the supplied axis maximum.
+Spectral arrays have shape `(n_samples, n_wavenumbers)`; label and axis arrays are one-dimensional. The clinical2018 cohort contains 10,000 spectra and is treated as the development dataset. It is divided using a stratified 80:20 split into model-training and validation subsets. The independent clinical2019 cohort contains 2,500 spectra and is used as the external evaluation set.
 
 
 
