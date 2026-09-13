@@ -42,7 +42,7 @@ Provide one copy of each of these files within the data directory or its subdire
 
 Spectral arrays have shape `(n_samples, n_wavenumbers)`; label and axis arrays are one-dimensional. Supply the intended five-class clinical subsets: the loader does not select those classes from a larger dataset. Clinical 2018 is split into training and validation sets; clinical 2019 is the external evaluation set. Seven equal-width inference bands span 400 cm⁻¹ to the smaller of 1,800 cm⁻¹ and the supplied axis maximum.
 
-All three loaders apply sample-wise L2 normalization, followed by training-fitted feature standardization within classifier pipelines. Melanoma and bacteria normalization uses the supplied full spectra; diabetes normalization follows spectral restriction. Full-spectrum baselines use all columns retained by their loader, not necessarily only the inference bands.
+
 
 ## Running analyses
 
