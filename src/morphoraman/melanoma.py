@@ -779,7 +779,7 @@ def morphogenetic_consensus_one_audit(band_logits0, frozen_flags=None, band_weig
                     mute_t[k] = True
                 else:
                     L_prop[k] = (1.0 - alpha) * L[k] + alpha * l_neigh_avg
-                    w_prop[k] = np.clip(w_prop[k] * (1.0 + diff_amp), wmin, wmax)
+                    w_prop[k] = np.clip(w_prop[k] + diff_amp, wmin, wmax)
             else:
                 raise ValueError("regime must be 'plain', 'H1', or 'H2'")
         w_prop = np.clip(w_prop, wmin, wmax)
