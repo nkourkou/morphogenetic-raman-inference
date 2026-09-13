@@ -635,7 +635,7 @@ def baselines():
                 l0 = [band_logits_test[i, k, :] for k in range(band_logits_test.shape[1])]
                 w0 = np.array([np.max(softmax(v)) for v in l0], dtype=float)
                 frozen_flags = np.zeros(len(l0), dtype=bool)
-                out = morphogenetic_consensus_one(band_logits0=l0, frozen_flags=frozen_flags, band_weights0=w0, alpha=0.3, lam=0.7, T=0.01, tau=0.12, max_iter=30, use_js=True, return_trajectories=False, record_stress=False, regime=regime_name, local_coupling=True, mute_weight=0.0, diff_amp=0.25, weight_clip=(0.0, 5.0), rng=np.random.default_rng(seed + i))
+                out = morphogenetic_consensus_one(band_logits0=l0, frozen_flags=frozen_flags, band_weights0=w0, alpha=0.3, lam=1.0, T=0.01, tau=0.0.5, max_iter=30, use_js=True, return_trajectories=False, record_stress=False, regime=regime_name, local_coupling=True, mute_weight=0.0, diff_amp=0.25, weight_clip=(0.0, 5.0), rng=np.random.default_rng(seed + i))
                 pred_probs.append(out['p_final'])
                 pred_labels.append(out['y_hat'])
             pred_probs = np.vstack(pred_probs)
