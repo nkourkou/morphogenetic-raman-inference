@@ -16,13 +16,13 @@ Dependencies are NumPy, pandas, SciPy, scikit-learn, and Matplotlib. An isolated
 
 Datasets are not included or downloaded automatically. Supply the files locally using `--data-dir`.
 
-### Melanoma
+### Melanoma (1)
 
 The loader searches recursively for CSV files below `dataset_i`; each file's immediate parent directory supplies its label. CSVs must contain numeric spectra without a header, one spectrum per row and 2,090 values per spectrum.
 
 The loader constructs an axis from 100 to 4,278 cm⁻¹ and rounds its column labels to integer wavenumbers. Labels `A` and `G` form the melanoma group, `HPM` and `HF` the normal-skin group, and `ZAM` the disease-related group. Serum, `DMEM`, and labels ending in `-S` are excluded. Seven inference bands cover 400–2,000 cm⁻¹.
 
-### Diabetes
+### Diabetes (2)
 
 The data directory must contain `innerArm.csv`, `thumbNail.csv`, `vein.csv`, and `earLobe.csv`. Each file requires:
 
@@ -32,7 +32,7 @@ The data directory must contain `innerArm.csv`, `thumbNail.csv`, `vein.csv`, and
 
 Spectra are restricted to 400–1,800 cm⁻¹. Patient identifiers are used to keep patients separate between training and evaluation sets.
 
-### Bacteria
+### Bacteria (3)
 
 Provide one copy of each of these files within the data directory or its subdirectories:
 
